@@ -16,7 +16,6 @@ const ProductCard = memo(({ product, onSwipe, onCartUpdate }: ProductCardProps) 
     const [exitDirection, setExitDirection] = useState<'left' | 'right' | 'up' | null>(null);
     const [isAnimating, setIsAnimating] = useState(false);
     const cardRef = useRef<HTMLDivElement>(null);
-    const isMobile = /Android|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent);
 
     const handleStart = useCallback((clientX: number, clientY: number) => {
         if (isAnimating) return;
